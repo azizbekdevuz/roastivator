@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔥 Roastivator - GitHub Profile Roaster
 
-## Getting Started
+A brutally honest GitHub profile analyzer that roasts developers based on their repositories, commit messages, and questionable emoji usage.
 
-First, run the development server:
+## 📁 Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+roastivator/
+├── src/
+│   ├── app/              # Next.js App Router (routes & layouts only)
+│   │   ├── api/          # API routes
+│   │   ├── page.tsx      # Homepage
+│   │   ├── layout.tsx    # Root layout
+│   │   └── not-found.tsx # 404 page
+│   ├── components/       # Reusable React components
+│   │   ├── providers/    # App providers & error boundaries
+│   │   ├── ui/          # Reusable UI components  
+│   │   └── github/      # GitHub-specific components
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Business logic & utility classes
+│   ├── utils/           # General utility functions
+│   ├── types/           # TypeScript definitions
+│   └── constants/       # Configuration & constants
+├── public/              # Static assets
+├── docs/                # Documentation
+└── ...config files      # Configuration files
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Smart Analysis**: Analyzes your GitHub profile, repositories, and commit history
+- **Brutal Honesty**: Get roasted based on your coding habits and contribution patterns  
+- **Commit Message Shaming**: Special attention to terrible commit messages like "fix", "update", and "oops"
+- **Emoji Crime Detection**: Identifies overuse of emojis in professional commits
+- **Beautiful UI**: Modern, minimalistic design with smooth animations
+- **Easter Eggs**: Special treatment for famous developers
+- **Demo Mode**: Try it out with pre-selected GitHub accounts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Quick Start
 
-## Learn More
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Enter a GitHub username and prepare to be roasted! 🔥
 
-## Deploy on Vercel
+## 🎮 Keyboard Shortcuts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `Ctrl + Enter`: Roast the entered username
+- `Esc`: Reset to input screen (when viewing results)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Built With
+
+- **Next.js 15** - React framework with App Router
+- **React 19** - Latest React with concurrent features
+- **TypeScript** - Type safety and better developer experience
+- **TailwindCSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, consistent icons
+- **GitHub API** - Real-time repository and user data
+
+## 🎯 Roasting Categories
+
+1. **Overall Profile**: Account age, repository count, follower ratios
+2. **Commit Messages**: Detection of lazy messages like "fix", "update", "WIP"
+3. **Contribution Patterns**: Activity levels, repository quality, naming conventions
+4. **Emoji Usage**: Professional vs. personal communication analysis
+
+## ⚠️ Disclaimer
+
+This tool is for entertainment purposes only. Results may cause emotional damage. Proceed with thick skin and a sense of humor!
+
+## 🤝 Contributing
+
+Found a bug or want to add more roasting algorithms? Pull requests welcome!
+
+## 📄 License
+
+MIT License - Feel free to roast responsibly.
