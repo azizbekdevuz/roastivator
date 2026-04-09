@@ -9,6 +9,7 @@ import { RoastDisplay } from '@/components/github/RoastDisplay';
 import { useGitHubData } from '@/hooks/useGitHubData';
 import { useRoasting } from '@/hooks/useRoasting';
 import { useClientOnly } from '@/hooks/useClientOnly';
+import { randomFloat } from '@/lib/random';
 
 type AppStep = 'input' | 'loading' | 'result';
 
@@ -116,10 +117,10 @@ const FloatingElements: React.FC = () => {
     if (mounted) {
       // Generate positions only on client side to avoid hydration mismatch
       const newPositions = Array.from({ length: 15 }, () => ({
-        left: Math.random() * 100,
-        top: Math.random() * 100,
-        duration: 3 + Math.random() * 2,
-        delay: Math.random() * 3,
+        left: randomFloat() * 100,
+        top: randomFloat() * 100,
+        duration: 3 + randomFloat() * 2,
+        delay: randomFloat() * 3,
       }));
       setPositions(newPositions);
     }

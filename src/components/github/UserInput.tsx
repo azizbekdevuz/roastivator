@@ -6,6 +6,7 @@ import { Github, Search, Dice6, Flame } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { AudioPlayer } from '@/components/ui/AudioPlayer';
+import { randomInt } from '@/lib/random';
 import { validateUsername } from '@/lib/validations';
 import { DEMO_USERNAMES } from '@/constants';
 
@@ -52,7 +53,7 @@ export const UserInput: React.FC<UserInputProps> = ({
   }, [handleSubmit, loading, disabled]);
 
   const tryDemo = useCallback(() => {
-    const randomUsername = DEMO_USERNAMES[Math.floor(Math.random() * DEMO_USERNAMES.length)];
+    const randomUsername = DEMO_USERNAMES[randomInt(DEMO_USERNAMES.length)];
     setUsername(randomUsername);
     setError('');
     
